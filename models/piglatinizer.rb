@@ -11,7 +11,7 @@ class PigLatinizer
         word << "ay"
       else
         while !vowels.include? word[0]
-          constants << word[0]
+          consonants << word[0]
           word = word.split("")[1..-1].join
       end
         word + constants + "ay"
