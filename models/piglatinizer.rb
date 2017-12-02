@@ -6,7 +6,7 @@ class PigLatinizer
       if non_words.include?(word)
         word
       elsif vowels.include? word[0]
-        word + "ay"
+        word << "ay"
       else
         constants = ""
         while !vowels.include? word[0]
