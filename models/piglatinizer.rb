@@ -1,10 +1,10 @@
 class PigLatinizer
 
   def piglatinize(word)
-    if /[aeiou]/ === word[0].downcase
+    if /[aeiou]/ == word[0].downcase
       "#{word}way"
     else
-      first = word.split(/[aeiou]).first
+      first = word.split(/[aeiou]/).first
       word = word.sub(first,"")
       "#{word}#{first}ay"
     end
