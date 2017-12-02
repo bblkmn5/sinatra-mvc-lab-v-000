@@ -2,7 +2,7 @@ class PigLatinizer
 
   def piglatinize(word)
     non_words = ['I', 'me', 'to', 'too', 'a', 'an', 'in', 'and', 'on']
-    alpha = ('a'..'z').to_a 
+    alpha = ('a'..'z').to_a
     vowels = ['a', 'e', 'i', 'o', 'u']
     consonants = alpha - vowels
       if non_words.include?(word)
