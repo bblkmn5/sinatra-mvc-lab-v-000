@@ -4,7 +4,7 @@ class PigLatinizer
     non_words = ['I', 'me', 'to', 'too', 'a', 'an', 'in', 'and', 'on']
       vowels = ['a', 'e', 'i', 'o', 'u']
       if non_words.include?(word)
-        word
+        word << "way"
       elsif vowels.include? word[0]
         word << "ay"
       else
