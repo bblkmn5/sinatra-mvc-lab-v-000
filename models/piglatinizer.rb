@@ -2,13 +2,14 @@ class PigLatinizer
 
   def piglatinize(word)
     non_words = ['I', 'me', 'to', 'too', 'a', 'an', 'in', 'and', 'on']
-      vowels = ['a', 'e', 'i', 'o', 'u']
+    alpha = ('a'..'z').to_a 
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    consonants = alpha - vowels
       if non_words.include?(word)
         word << "way"
       elsif vowels.include? word[0]
         word << "ay"
       else
-        constants = ""
         while !vowels.include? word[0]
           constants << word[0]
           word = word.split("")[1..-1].join
