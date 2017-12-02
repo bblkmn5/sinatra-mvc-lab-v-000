@@ -3,8 +3,9 @@ class PigLatinizer
   def piglatinize(word)
     non_words = ['i', 'me', 'to', 'too', 'a', 'an', 'in', 'and', 'on']
       vowels = ['a', 'e', 'i', 'o', 'u']
-
-      if vowels.include? word[0]
+      if non_words.include?(word)
+        word
+      elsif vowels.include? word[0]
         word + "ay"
       else
         constants = ""
